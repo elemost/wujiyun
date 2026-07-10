@@ -22,7 +22,9 @@
 
 ## 🛠 技术栈
 
-后端采用Java 8\+、Spring Boot、Spring Security、MyBatis\-Plus、Redis、MySQL 8\.0，前端使用React、Ant Design、Umi、TypeScript搭配可视化拖拽引擎，整体架构包含数据建模引擎、表单设计引擎、业务流程引擎、权限体系与数据可视化组件。
+后端采用Java 8\+、Spring Boot、Spring Security、MyBatis\-Plus、Redis、MySQL 8\.0;
+
+前端使用React、Ant Design、Umi、TypeScript搭配可视化拖拽引擎，整体架构包含数据建模引擎、表单设计引擎、业务流程引擎、权限体系与数据可视化组件。
 
 ## 🎯 核心功能
 
