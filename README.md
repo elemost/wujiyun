@@ -113,16 +113,20 @@ wujiyun
 ## 💡 参与贡献
 
 欢迎提交 Issue 反馈 Bug、提交功能建议；
+
 欢迎 Fork 项目，提交 PR 参与代码贡献。
+
 
 ## 📄 开源协议
 
 社区版遵循开源协议，仅允许学习、企业内部非商用使用；
+
 禁止去掉版权、二次打包售卖；商用必须获取官方授权。
 
 ## 📞 官方联系方式
 
 官方网站：[https://www\.elemost\.com](https://www.elemost.com)
+
 开源仓库：[https://github\.com/elemost/wujiyun](https://github.com/elemost/wujiyun)
 
 <table style="text-align: center;">
