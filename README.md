@@ -239,7 +239,7 @@ chmod +x *.sh
 
 ### 7\.3 端口8080被占用
 
-解决方案：关闭占用端口程序，或修改 docker\-compose\.yml 端口映射配置
+8080端口被占用, 则使用8081端口
 
 ### 7\.4 外网无法访问系统
 
@@ -259,7 +259,7 @@ chmod +x *.sh
 
 ## 九、官方联系方式
 
-官方网站：https://www\.elemost\.com
+官方网站：https://www.elemost.com
 
-开源仓库：https://github\.com/elemost/wujiyun
+开源仓库：https://github.com/elemost/wujiyun
 
