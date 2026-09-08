@@ -1,105 +1,265 @@
-# 五极云
+# 五极云部署文档
 
-## AI + aPaaS 企业级零代码快速开发平台
+**文档版本**：V1\.0\.0
 
-**低成本、高效率、易上手，助力企业快速实现数字化管理**
+**适用项目**：五极云开源社区版（AI\+aPaaS零代码企业级快速开发平台）
+
+**部署方式**：Docker一键自动化部署、源码手动部署
+
+**适配系统**：Ubuntu、CentOS、Debian 主流 Linux 服务器
 
 ---
 
-## ⚠️ 开源重要声明
+## 一、项目简介
 
-本项目完全开源开放源码，仅面向技术学习、源码研究、个人研究、企业内部非商用私有化部署，严禁任何形式商业使用、二次售卖、贴牌分发、搭建SaaS商用服务、项目外包交付等盈利行为，如需商用授权、企业正式版、定制开发，请联系官方获取正规商业授权。
+五极云是一款企业级 AI\+aPaaS 零代码快速开发平台，基于前后端分离架构，可通过可视化拖拽快速搭建 CRM、进销存、OA办公、流程审批、数据大屏、仓储管理等全场景企业业务系统。
 
-## 📌 使用规范
+平台支持**私有化内网部署、数据本地存储、多端协同**，适配中小企业、工厂、政企内部数字化场景，开源版仅供学习、源码研究、企业内部非商用使用。
 
-✅ 允许操作：免费拉取源码学习平台架构与底层逻辑，个人本地部署调试用于技术提升，企业内网私有化部署仅限内部办公使用，自由修改源码仅限自用与技术交流；
+### 技术栈
 
-❌ 禁止操作：禁止源码倒卖、改名商用、搭建收费系统、商业项目交付以及一切盈利性质二次开发行为。
+- **后端**：Java8\+、Spring Boot、Spring Security、MyBatis\-Plus、Redis、MySQL8\.0
 
-## 🌟 平台介绍
+- **前端**：React、Umi、TypeScript、Ant Design、可视化拖拽引擎
 
-五极云是杭州五极网络技术有限公司自主研发企业级零代码开发平台，采用前后端分离架构，无需大量编写代码，通过可视化拖拽方式快速搭建各类企业业务管理系统，平台内置仓库WMS管理、客户CRM管理、进销存、OA办公、流程审批、数据报表统计等全场景功能，支持入库、出库、库存调拨、智能盘点、数据大屏可视化、多级权限管控等能力，开箱即用大幅降低企业数字化成本，开源版开放核心源码，适合开发者学习零代码架构设计、流程编排与可视化搭建思路。
+- **移动端**：微信原生小程序
 
-## 🛠 技术栈
+- **部署环境**：Docker / Docker Compose、Linux
 
-后端采用Java 8\+、Spring Boot、Spring Security、MyBatis\-Plus、Redis、MySQL 8\.0;
+---
 
-前端使用React、Ant Design、Umi、TypeScript搭配可视化拖拽引擎，整体架构包含数据建模引擎、表单设计引擎、业务流程引擎、权限体系与数据可视化组件。
+## 二、环境最低配置要求
 
-## 🎯 核心功能
+### 2\.1 服务器配置
 
-支持可视化拖拽快速搭建业务表单与页面，自定义数据模型自动生成基础业务功能，具备完整仓储全流程管理与客户管理能力，可自定义业务审批流程，实现多层级数据与账号权限隔离，支持第三方接口数据互通，同时适配电脑端与移动端多端协同办公，自动生成各类业务统计报表。
+- CPU：4核及以上
 
-## 📁 项目目录结构
+- 内存：8G及以上
 
-五极云开源版采用标准化前后端分离目录结构，模块划分清晰，结构规范，便于源码学习、二次调试、源码研读与企业内网私有化部署。
+- 系统盘：40G及以上
 
-```Plain Text
-WuJiYun-Open 五极云开源版
-├── README.md                 # 项目详细说明文档
-├── LICENSE                   # 非商用开源授权协议
-├── .gitignore                # Git提交忽略文件配置
-├── pom.xml                   # 后端父工程Maven依赖管理
-├── docs/                     # 开发文档、部署教程、使用手册
-├── sql/                      # 数据库初始化脚本、基础数据脚本
-├── backend/                  # Java后端微服务模块
-│   ├── wujiyun-core          # 零代码平台核心引擎
-│   ├── wujiyun-admin         # 后台管理中心服务
-│   └── wujiyun-common        # 公共工具类、全局异常、常量封装
-└── frontend/                 # React前端项目
-    ├── wujiyun-design        # 可视化拖拽设计器
-    └── wujiyun-admin         # 业务管理系统前端页面
-```
+- 操作系统：Ubuntu / CentOS / Debian（主流Linux发行版）
 
-## 🚀 全平台一键部署
+### 2\.2 软件环境（源码部署必备）
 
-项目全面适配 Windows、Linux、MacOS 全平台，支持一键自动化部署，无需复杂配置，开箱即用，同时提供标准手动部署环境参数。
+- JDK 1\.8\+
 
-### Windows 部署
+- MySQL 8\.0\+
 
-下载一键部署脚本，右键管理员身份运行，全自动配置运行环境、初始化数据库、启动全套服务。
+- Redis 5\.0\+
 
-```Plain Text
-wget https://install.elemost.com/wujiyun/windows_install.bat
-```
+- Maven 3\.8\+
 
-### Linux 部署（CentOS / Ubuntu）
+- Node\.js 16\+
 
-服务器终端执行一键安装命令，部署完成后启动服务，浏览器即可访问项目。
+> **提示**：Docker一键部署无需手动配置以上环境，脚本自动安装所有依赖。
+> 
+> 
 
-```Plain Text
-curl -fsSL https://install.elemost.com/wujiyun/linux_install.sh | bash
-systemctl start wujiyun
-```
+---
 
-默认访问地址：http://服务器IP:8080
+## 三、Docker 一键自动化部署（推荐）
 
-### MacOS 部署
+支持全平台自动安装 Docker、Docker Compose、初始化数据库、启动全套服务，内置文件 SHA256 哈希校验，防止文件篡改，部署安全可靠。
 
-终端执行一键安装脚本，安装完成后启动项目即可正常使用。
+### 3\.1 部署前置要求
+
+- 必须使用 **root 超级管理员** 执行命令
+
+- 服务器开放 8080 端口（可自行修改端口配置）
+
+- 服务器可正常访问外网（用于拉取镜像、部署脚本）
+
+### 3\.2 各系统部署命令
+
+#### Ubuntu / 阿里云ECS
 
 ```Plain Text
-bash <(curl -s https://install.elemost.com/wujiyun/mac_install.sh)
-./start.sh
+curl -fsSL https://cloud.elemost.com/docker/ubuntu/install.sh | bash
 ```
 
-### 手动部署环境要求
+#### CentOS / 华为云/腾讯云OpenCloud
 
-如需手动部署搭建，需提前配置基础运行环境：JDK 1\.8\+、MySQL 8\.0、Redis 5\.0\+、Node\.js 16\+
+```Plain Text
+curl -fsSL https://cloud.elemost.com/docker/centos/install.sh | bash
+```
 
-## 🤝 开源交流规范
+#### Debian
 
-本项目开源仅供**技术学习、源码研究、个人练手、企业内部非商用私有化部署**。欢迎广大开发者 Star 收藏、Fork 学习、提交 Issue 交流技术问题，共同探讨零代码架构开发思路。严禁源码倒卖、二次打包售卖、贴牌商用、搭建SaaS付费平台、商业项目交付等一切盈利行为，禁止上传任何商用改造、盈利性质的二次开发代码。
+```Plain Text
+curl -fsSL https://cloud.elemost.com/docker/debian/install.sh | bash
+```
 
-## 📄 版权与开源协议
+### 3\.3 部署流程说明
 
-Copyright © 2026 杭州五极网络技术有限公司
+1. 自动创建部署目录：`/wujiyun/server/panel`
 
-GitHub 仓库默认 MIT 协议仅为平台占位必填项，无实际法律效力。本项目真实生效、唯一约束的开源协议为仓库根目录 **LICENSE** 自定义非商用协议，所有使用、修改、分发行为均以此文件为准。
+2. 自动安装 curl/wget 下载工具
 
-## 📞 官方对接联系
+3. 下载 docker\-compose\.yml、初始化脚本、启停/卸载脚本
 
-如需企业正式版私有化部署、商用授权、定制开发、官方技术支持、商务合作;
+4. SHA256 哈希校验文件完整性，杜绝篡改风险
 
-官方网站地址：https://www.elemost.com
+5. 自动安装 Docker、Docker Compose
+
+6. 自动初始化数据库、启动全套前后端服务
+
+### 3\.4 访问地址
+
+部署完成后，浏览器访问：
+
+```Plain Text
+http://服务器IP:8080
+```
+
+---
+
+## 四、Docker 服务管理命令
+
+所有运维脚本统一存放目录：`/wujiyun/server/panel`
+
+### 4\.1 重启服务
+
+```Plain Text
+cd /wujiyun/server/panel && ./restart.sh
+```
+
+### 4\.2 停止服务
+
+```Plain Text
+cd /wujiyun/server/panel && docker-compose down
+```
+
+### 4\.3 启动服务
+
+```Plain Text
+cd /wujiyun/server/panel && docker-compose up -d
+```
+
+### 4\.4 完全卸载
+
+```Plain Text
+cd /wujiyun/server/panel && ./uninstall.sh
+```
+
+> **注意**：卸载脚本会清空容器、镜像及部署目录数据，请提前备份重要业务数据！
+> 
+> 
+
+---
+
+## 五、源码手动部署（开发/二次开发使用）
+
+### 5\.1 克隆项目源码
+
+```Plain Text
+git clone https://github.com/elemost/wujiyun.git
+cd wujiyun
+```
+
+### 5\.2 项目目录说明
+
+```Plain Text
+wujiyun
+├── backend          # Java SpringBoot 后端核心代码
+├── frontend         # React PC前端管理页面
+├── miniprogram      # 微信小程序移动端源码
+├── sql              # 数据库初始化脚本
+├── docs             # 项目部署、使用、接口文档
+└── README.md        # 项目说明
+```
+
+### 5\.3 数据库初始化
+
+1. 新建 MySQL 数据库（推荐编码：utf8mb4，排序规则：utf8mb4\_unicode\_ci）
+
+2. 执行 `sql/` 目录下所有 \.sql 初始化脚本
+
+3. 完成数据表、基础配置数据初始化
+
+### 5\.4 后端部署
+
+1. 进入后端目录：`cd backend`
+
+2. 修改配置文件，配置数据库、Redis 连接信息
+
+3. 编译打包：`mvn clean package -DskipTests`
+
+4. 启动项目：`java -jar target/*.jar`
+
+### 5\.5 前端部署
+
+1. 进入前端目录：`cd frontend`
+
+2. 安装依赖：`npm install`
+
+3. 编译打包：`npm run build`
+
+4. 将打包产物部署至 Nginx 静态目录
+
+### 5\.6 微信小程序部署
+
+1. 打开微信开发者工具
+
+2. 导入 `miniprogram` 目录源码
+
+3. 修改小程序后端接口请求地址为服务器公网IP
+
+4. 编译预览/上传发布
+
+---
+
+## 六、接口文档访问
+
+接口文档：
+
+```Plain Text
+https://help.elemost.com
+```
+
+---
+
+## 七、常见问题 FAQ
+
+### 7\.1 执行脚本提示 Permission denied
+
+问题原因：脚本无执行权限
+
+解决方案：
+
+```Plain Text
+chmod +x *.sh
+```
+
+### 7\.2 文件哈希校验失败
+
+问题原因：部署文件下载不完整、被篡改、网络异常
+
+解决方案：重新执行部署命令，切换稳定网络重试
+
+### 7\.3 端口8080被占用
+
+解决方案：关闭占用端口程序，或修改 docker\-compose\.yml 端口映射配置
+
+### 7\.4 外网无法访问系统
+
+解决方案：服务器安全组、防火墙放行 8080 端口
+
+---
+
+## 八、开源使用规范
+
+本项目开源代码 **仅用于技术学习、源码研究、企业内部非商用私有化部署**。
+
+严禁：源码倒卖、二次贴牌售卖、搭建SaaS商用服务、商业项目外包交付、盈利性二次开发。
+
+如需商用授权、定制开发、专属运维、信创适配服务，请联系官方获取商业版本授权。
+
+---
+
+## 九、官方联系方式
+
+官方网站：https://www\.elemost\.com
+
+开源仓库：https://github\.com/elemost/wujiyun
 
