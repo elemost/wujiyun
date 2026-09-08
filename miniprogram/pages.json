@@ -1,0 +1,131 @@
+{
+	"pages": [
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "工作台",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/message/message",
+			"style": {
+				"navigationStyle": "custom",
+				"navigationBarTitleText": "消息中心"
+			}
+		},
+		{
+			"path": "pages/message/messageDetail",
+			"style": {
+				"navigationBarTitleText": "消息详情"
+			}
+		},
+		{
+			"path": "pages/webView/webView"
+		},
+		{
+			"path": "pages/market/market",
+			"style": {
+				"navigationBarTitleText": "应用市场",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/market/marketDetail",
+			"style": {
+				"navigationBarTitleText": "模板详情"
+			}
+		},
+		{
+			"path": "pages/contact/contact",
+			"style": {
+				"navigationBarTitleText": "通讯录",
+				"enablePullDownRefresh": true
+			}
+		},
+		{
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarTitleText": "我的"
+			}
+		},
+		{
+			"path": "pages/application/application"
+		},
+		{
+			"path": "pages/app-list/index"
+		},
+		{
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "搜索"
+			}
+		},
+		{
+			"path": "pages/personalCenter/personalCenter",
+			"style": {
+				"navigationBarTitleText": "个人中心"
+			}
+		},
+		{
+			"path": "pages/personalCenter/helpCenter",
+			"style": {
+				"navigationBarTitleText": "帮助中心"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录/注册"
+			}
+		},
+		{
+			"path": "pages/login/phoneLogin",
+			"style": {
+				"navigationBarTitleText": "手机号登录/注册"
+			}
+		},
+		{
+			"path": "pages/filePreview/index",
+			"style": {
+				"navigationBarTitleText": "文件预览"
+			}
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#ffffff",
+		"navigationBarTitleText": "五极云",
+		"backgroundColor": "#F6F6F8",
+		//  #ifdef H5
+		"navigationStyle": "custom"
+		// #endif
+	},
+	"tabBar": {
+		"custom": true,
+		"list": [
+			{
+				"pagePath": "pages/index/index",
+				"text": "工作台"
+			},
+			{
+				"pagePath": "pages/message/message",
+				"text": "消息中心"
+			},
+			{
+				"pagePath": "pages/market/market",
+				"text": "应用市场"
+			},
+			{
+				"pagePath": "pages/contact/contact",
+				"text": "通讯录"
+			},
+			{
+				"pagePath": "pages/my/my",
+				"text": "我的"
+			}
+		]
+	},
+	"usingComponents": {}
+}

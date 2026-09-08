@@ -1,0 +1,76 @@
+/* 公共样式变量 */
+$text-color: #333;
+$bg-color: #f8f8f8;
+
+/* 公共样式类 */
+.text-center {
+  text-align: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.global-loading-wrap {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 拓展组件重做样式类 */
+.uni-easyinput {
+  .is-focused {
+    border-color: var(--primary-color) !important;
+
+    .content-clear-icon {
+      color: var(--primary-color) !important;
+
+      .uni-icons {
+        color: var(--primary-color) !important;
+      }
+    }
+  }
+
+  .uni-easyinput__placeholder-class {
+    font-size: 14px !important;
+  }
+}
+
+.uv-type-primary {
+  color: var(--primary-color) !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+
+  .uv-toast__content__text--primary {
+    color: var(--primary-color) !important;
+  }
+
+  .uv-icon__icon--primary {
+    color: var(--primary-color) !important;
+  }
+}
+
+.uv-button--primary {
+  background-color: var(--primary-color) !important;
+  border-color: var(--primary-color) !important;
+}
+
+.uv-button--plain {
+  background-color: #ffffff !important;
+}
+
+.uv-button--plain.uv-button--primary {
+  color: var(--primary-color) !important;
+}
+
+.uv-drop-down-item {
+  padding: 0 !important;
+}
