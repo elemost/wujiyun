@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuji.workflow.mapper.HiIdentitylinkMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wuji.workflow.model.entity.HiIdentitylinkEntity">
+        <id column="ID_" property="id" />
+        <result column="GROUP_ID_" property="groupId" />
+        <result column="TYPE_" property="type" />
+        <result column="USER_ID_" property="userId" />
+        <result column="TASK_ID_" property="taskId" />
+        <result column="CREATE_TIME_" property="createTime" />
+        <result column="PROC_INST_ID_" property="procInstId" />
+        <result column="SCOPE_ID_" property="scopeId" />
+        <result column="SUB_SCOPE_ID_" property="subScopeId" />
+        <result column="SCOPE_TYPE_" property="scopeType" />
+        <result column="SCOPE_DEFINITION_ID_" property="scopeDefinitionId" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwuji_cloud=self.webpackChunkwuji_cloud||[]).push([[72397,1540,75814,48617,98406,94075,92126],{4518:function(u,e,a){a.r(e),a.d(e,{configMap:function(){return l}});var f=a(5840),t=a(40966),c=a(32787),l={page:t.default,field:f.default,tabs:c.default}}}]);

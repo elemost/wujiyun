@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuji.workflow.mapper.FlowableActivityConfigMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wuji.workflow.model.entity.FlowableActivityConfigEntity">
+        <result column="id" property="id" />
+        <result column="create_time" property="createTime" />
+        <result column="modify_time" property="modifyTime" />
+        <result column="deleted" property="deleted" />
+        <result column="model_id" property="modelId" />
+        <result column="activity_id" property="activityId" />
+        <result column="assignee_config" property="assigneeConfig" />
+        <result column="field_config" property="fieldConfig" />
+        <result column="copy_config" property="copyConfig" />
+        <result column="creator_name" property="creatorName" />
+        <result column="modifier_name" property="modifierName" />
+    </resultMap>
+
+</mapper>

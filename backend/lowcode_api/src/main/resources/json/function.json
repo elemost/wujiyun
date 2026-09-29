@@ -1,0 +1,373 @@
+{
+  "function": [
+    {
+      "type": "逻辑函数",
+      "function": "IF",
+      "desc": "如果满足条件condition，则返回consequent，否则返回alternate，支持多层嵌套IF函数。 等价于直接用JS表达式如：condition ? consequent : alternate。",
+      "demo": "IF(condition, consequent, alternate)"
+    },
+    {
+      "type": "逻辑函数",
+      "function": "AND",
+      "desc": "条件全部符合，返回 true，否则返回 false。 示例：AND(语文成绩>80, 数学成绩>80)， 语文成绩和数学成绩都大于 80，则返回 true，否则返回 false， 等价于直接用JS表达式如：语文成绩>80 && 数学成绩>80。",
+      "demo": "AND(expression1, expression2, ...expressionN)",
+      "returnType": "文本"
+    },
+    {
+      "type": "逻辑函数",
+      "function": "OR",
+      "desc": "条件任意一个满足条件，返回 true，否则返回 false。 示例：OR(语文成绩>80, 数学成绩>80)， 语文成绩和数学成绩任意一个大于 80，则返回 true，否则返回 false， 等价于直接用JS表达式如：语文成绩>80 || 数学成绩>80。",
+      "demo": "OR(expression1, expression2, ...expressionN)",
+      "returnType": "文本"
+    },
+    {
+      "type": "逻辑函数",
+      "function": "XOR",
+      "desc": "异或处理，多个表达式组中存在奇数个真时认为真。 示例：XOR(语文成绩 > 80, 数学成绩 > 80, 英语成绩 > 80) 三门成绩中有一门或者三门大于 80，则返回 true，否则返回 false。",
+      "demo": "XOR(condition1, condition2, ...expressionN)",
+      "returnType": "文本"
+    },
+    {
+      "type": "逻辑函数",
+      "function": "IFS",
+      "desc": "判断函数集合，相当于多个 else if 合并成一个。 示例：IFS(语文成绩 > 80, \"优秀\", 语文成绩 > 60, \"良\", \"继续努力\")， 如果语文成绩大于 80，则返回优秀，否则判断大于 60 分，则返回良，否则返回继续努力。",
+      "demo": "IFS(condition1, result1, condition2, result2,...conditionN, resultN)"
+    },
+    {
+      "type": "数学函数",
+      "function": "ABS",
+      "desc": "返回传入数字的绝对值。",
+      "demo": "ABS(num)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "MAX",
+      "desc": "获取最大值，如果只有一个参数且是数组，则计算这个数组内的值。",
+      "demo": "MAX(num1, num2, ...numN)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "MIN",
+      "desc": "获取最小值，如果只有一个参数且是数组，则计算这个数组内的值",
+      "demo": "MIN(num1, num2, ...numN)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "SUM",
+      "desc": "求和，如果只有一个参数且是数组，则计算这个数组内的值。",
+      "demo": "SUM(num1, num2, ...numN)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "PRODUCT",
+      "desc": "获取一组数值的乘积",
+      "demo": "PRODUCT(num1, num2, ...numN)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "INT",
+      "desc": "将数值向下取整为最接近的整数。",
+      "demo": "INT(num)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "MOD",
+      "desc": "返回两数相除的余数，参数 number 是被除数，divisor 是除数。",
+      "demo": "MOD(num, divisor)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "ROUND",
+      "desc": "将数字四舍五入到指定的位数，可以设置小数位。",
+      "demo": "ROUND(num, numDigits = 2)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "SQRT",
+      "desc": "开平方，参数 number 为非负数",
+      "demo": "SQRT(num)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "AVERAGE",
+      "desc": "返回所有参数的平均值，如果只有一个参数且是数组，则计算这个数组内的值。",
+      "demo": "AVERAGE(num1, num2, ...numN)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "LARGE",
+      "desc": "数据集中第 k 个最大值。",
+      "demo": "LARGE(array, k)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "RMBCAP",
+      "desc": "将数值转为中文大写金额。",
+      "demo": "RMBCAP(num)",
+      "returnType": "文本"
+    },
+    {
+      "type": "数学函数",
+      "function": "RAND",
+      "desc": "返回大于等于 0 且小于 1 的均匀分布随机实数。每一次触发计算都会变化。 示例：`RAND()*100`， 返回 0-100 之间的随机数。",
+      "demo": "RAND()",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "POWER",
+      "desc": "返回基数的指数次幂，参数base为基数，exponent为指数，如果参数值不合法则返回基数本身，计算结果不合法，则返回NaN。",
+      "demo": "POWER(base, exponent)",
+      "returnType": "数字"
+    },
+    {
+      "type": "文本函数",
+      "function": "CONCATENATE",
+      "desc": "将多个文本合并成一个文本。",
+      "demo": "CONCATENATE(文本1,文本2,...)",
+      "returnType": "文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "LEFT",
+      "desc": "返回传入文本左侧的指定长度字符串。",
+      "demo": "LEFT(text, len)",
+      "returnType": "文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "RIGHT",
+      "desc": "返回传入文本右侧的指定长度字符串。",
+      "demo": "RIGHT(text, len)",
+      "returnType": "文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "LEN",
+      "desc": "计算文本的长度。",
+      "demo": "LEN(text)",
+      "returnType": "数字"
+    },
+    {
+      "type": "文本函数",
+      "function": "ISEMPTY",
+      "desc": "判断文本是否为空。",
+      "demo": "ISEMPTY(text)",
+      "returnType": "文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "CHAR",
+      "desc": "返回计算机字符集的数字代码所对应的字符。 示例：`CHAR(97)` 等价于 \"a\"。",
+      "demo": "CHAR(code)",
+      "returnType": "文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "LOWER",
+      "desc": "将传入文本转成小写。",
+      "demo": "LOWER(text)",
+      "returnType": "文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "UPPER",
+      "desc": "将传入文本转成大写。",
+      "demo": "UPPER(text)",
+      "returnType": "文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "SPLIT",
+      "desc": "将文本根据指定片段分割成数组。 示例：`SPLIT(\"a,b,c\", \",\")`， 返回 `[\"a\", \"b\", \"c\"]`。",
+      "demo": "SPLIT(text, ',')",
+      "returnType": "文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "TRIM",
+      "desc": "将文本去除前后空格。",
+      "demo": "TRIM(text)",
+      "returnType": "文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "REPLACE",
+      "desc": "对文本进行全量替换。",
+      "demo": "REPLACE(text, search, replace)",
+      "returnType": "文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "SEARCH",
+      "desc": "对文本进行搜索，返回命中的位置。",
+      "demo": "SEARCH(text, search, 0)",
+      "returnType": "文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "MID",
+      "desc": "返回文本字符串中从指定位置开始的特定数目的字符。",
+      "demo": "MID(text, from, len)",
+      "returnType": "文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "UUID",
+      "desc": "生成UUID字符串",
+      "demo": "UUID(8)",
+      "returnType": "文本"
+    },
+    {
+      "type": "日期函数",
+      "function": "DATE",
+      "desc": "通过传入一个类型为时间戳的参数，将该时间戳转换为日期时间字符串，默认格式为：yyyy-MM-dd hh:mm:ss。",
+      "demo": "DATE('1693735115000')",
+      "returnType": "文本"
+    },
+    {
+      "type": "日期函数",
+      "function": "TIMESTAMP",
+      "desc": "返回时间的时间戳。",
+      "demo": "TIMESTAMP(date, format = \"X\")",
+      "returnType": "时间戳"
+    },
+    {
+      "type": "日期函数",
+      "function": "TODAY",
+      "desc": "返回今天的日期。",
+      "demo": "TODAY()",
+      "returnType": "时间戳"
+    },
+    {
+      "type": "日期函数",
+      "function": "NOW",
+      "desc": "返回现在的日期",
+      "demo": "NOW()",
+      "returnType": "时间戳"
+    },
+    {
+      "type": "日期函数",
+      "function": "WEEKDAY",
+      "desc": "获取日期的星期几。 示例 WEEKDAY('2023-02-27') 得到 0。 WEEKDAY('2023-02-27', 2) 得到 1。",
+      "demo": "WEEKDAY(date)",
+      "returnType": "数字"
+    },
+    {
+      "type": "日期函数",
+      "function": "WEEKNUM",
+      "desc": "获取年份的星期，即第几周。 示例 WEEK('2023-03-05') 得到 9。",
+      "demo": "WEEKNUM(date)",
+      "returnType": "数字"
+    },
+    {
+      "type": "日期函数",
+      "function": "ISOWEEKNUM",
+      "desc": "获取年份的星期，即第几周。 示例 WEEK('2023-03-05') 得到 9。",
+      "demo": "ISOWEEKNUM(date)",
+      "returnType": "数字"
+    },
+    {
+      "type": "日期函数",
+      "function": "MONTH",
+      "desc": "返回日期的月份，这里就是自然月份。",
+      "demo": "MONTH(date)",
+      "returnType": "数字"
+    },
+    {
+      "type": "日期函数",
+      "function": "DAY",
+      "desc": "返回日期的天。",
+      "demo": "DAY(date)",
+      "returnType": "数字"
+    },
+    {
+      "type": "日期函数",
+      "function": "HOUR",
+      "desc": "返回日期的小时。",
+      "demo": "HOUR(date)",
+      "returnType": "数字"
+    },
+    {
+      "type": "日期函数",
+      "function": "MINUTE",
+      "desc": "返回日期的分。",
+      "demo": "MINUTE(date)",
+      "returnType": "数字"
+    },
+    {
+      "type": "日期函数",
+      "function": "SECOND",
+      "desc": "返回日期的秒。",
+      "demo": "SECOND(date)",
+      "returnType": "数字"
+    },
+    {
+      "type": "日期函数",
+      "function": "DATEDIF",
+      "desc": "计算两个日期时间相差的年数、月数、天数、小时数、分钟数、秒数。\n单位可以是 \"y\" 、\"M\"、\"d\"、\"h\"、\"m\"、\"s\"",
+      "demo": "DATEDIF(startDate, endDate, 'd')",
+      "returnType": "数字"
+    },
+    {
+      "type": "日期函数",
+      "function": "DATEDELTA",
+      "desc": "修改日期，对日期进行加减天操作。 示例： DATEDELTA(A, -2)， 对日期 A 进行往前减2天的操作。",
+      "demo": "DATEDELTA(date, 2)",
+      "returnType": "文本"
+    },
+    {
+      "type": "数组",
+      "function": "COUNT",
+      "desc": "返回数组的长度。",
+      "demo": "COUNT(arr)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数组",
+      "function": "JOIN",
+      "desc": "数组转成字符串。 示例： JOIN(['a', 'b', 'c'], '=') 得到 'a=b=c'。",
+      "demo": "JOIN(arr, string)",
+      "returnType": "文本"
+    },
+    {
+      "type": "其他",
+      "function": "TEXTUSER",
+      "desc": "获取成员的姓名（name）和编号（id）。",
+      "demo": "TEXTUSER(成员单选, \"name\")",
+      "returnType": "文本"
+    },
+    {
+      "type": "其他",
+      "function": "REMOVEUSER",
+      "desc": "在第一个用户列表中移除另一个用户列表中存在的用户",
+      "demo": "REMOVEUSER(成员列表, 成员列表)",
+      "returnType": "用户"
+    },
+    {
+      "type": "其他",
+      "function": "TEXTDEPT",
+      "desc": "获取部门的名称（name）和编号（id）。",
+      "demo": "TEXTDEPT(部门单选, \"name\")",
+      "returnType": "文本"
+    },
+    {
+      "type": "其他",
+      "function": "TEXTLOCATION",
+      "desc": "返回地址/定位字段详细值。 用法：TEXTLOCATION(地址/定位字段, \"返回值精度\")，精度可以是\"province\"、\"city\"、\"district\"、\"detail\"。",
+      "demo": "TEXTLOCATION(地址字段, \"province\" ) ，返回字段的「省」信息，如浙江省。",
+      "returnType": "文本"
+    }
+  ]
+}

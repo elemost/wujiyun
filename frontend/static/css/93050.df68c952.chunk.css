@@ -1,0 +1,1 @@
+.listItem{display:flex;align-items:center;gap:8px;background-color:#fff;padding:4px 10px;margin-bottom:5px}.listItem .groupName{position:relative;flex:1 1;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}

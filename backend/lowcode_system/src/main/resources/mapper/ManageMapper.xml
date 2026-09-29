@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuji.service.mapper.ManageMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wuji.service.model.entity.ManageEntity">
+        <result column="id" property="id" />
+        <result column="create_time" property="createTime" />
+        <result column="modify_time" property="modifyTime" />
+        <result column="deleted" property="deleted" />
+        <result column="company_id" property="companyId" />
+        <result column="manage_name" property="manageName" />
+        <result column="app_privilege" property="appPrivilege" />
+        <result column="dept_scope" property="deptScope" />
+        <result column="post_scope" property="postScope" />
+        <result column="role_read" property="roleRead" />
+        <result column="role_write" property="roleWrite" />
+        <result column="dept_manage" property="deptManage" />
+        <result column="corp_coop_manage" property="corpCoopManage" />
+        <result column="app_update" property="appUpdate" />
+        <result column="creator" property="creator" />
+        <result column="modifier" property="modifier" />
+    </resultMap>
+
+</mapper>

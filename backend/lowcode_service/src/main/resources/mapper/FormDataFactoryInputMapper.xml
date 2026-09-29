@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuji.service.mapper.FormDataFactoryInputMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wuji.service.model.entity.FormDataFactoryInputEntity">
+        <result column="id" property="id" />
+        <result column="data_factory_id" property="dataFactoryId" />
+        <result column="application_id" property="applicationId" />
+        <result column="input_form_id" property="inputFormId" />
+        <result column="input_application_id" property="inputApplicationId" />
+        <result column="version" property="version" />
+    </resultMap>
+
+</mapper>

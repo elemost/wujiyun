@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuji.admin.mapper.UserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wuji.admin.model.entity.UserEntity">
+        <id column="user_id" property="userId" />
+        <result column="user_code" property="userCode" />
+        <result column="uuid" property="uuid" />
+        <result column="company_id" property="companyId" />
+        <result column="dept_id" property="deptId" />
+        <result column="user_name" property="userName" />
+        <result column="nick_name" property="nickName" />
+        <result column="password" property="password" />
+        <result column="real_name" property="realName" />
+        <result column="user_type" property="userType" />
+        <result column="email" property="email" />
+        <result column="phonenumber" property="phonenumber" />
+        <result column="sex" property="sex" />
+        <result column="avatar" property="avatar" />
+        <result column="status" property="status" />
+        <result column="del_flag" property="delFlag" />
+        <result column="login_ip" property="loginIp" />
+        <result column="login_date" property="loginDate" />
+        <result column="create_by" property="createBy" />
+        <result column="create_time" property="createTime" />
+        <result column="update_by" property="updateBy" />
+        <result column="update_time" property="updateTime" />
+        <result column="remark" property="remark" />
+        <result column="industry" property="industry" />
+        <result column="source" property="source" />
+        <result column="position" property="position" />
+        <result column="screen_count" property="screenCount" />
+        <result column="screen_use_count" property="screenUseCount" />
+        <result column="demand" property="demand" />
+        <result column="interests" property="interests" />
+    </resultMap>
+
+</mapper>

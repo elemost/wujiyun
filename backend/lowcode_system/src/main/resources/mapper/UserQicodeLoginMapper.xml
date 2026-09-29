@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuji.admin.mapper.UserQicodeLoginMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wuji.admin.model.entity.UserQicodeLoginEntity">
+        <id column="id" property="id" />
+        <result column="ticket" property="ticket" />
+        <result column="qrScene" property="qrScene" />
+        <result column="create_time" property="createTime" />
+        <result column="open_id" property="openId" />
+        <result column="union_id" property="unionId" />
+        <result column="used" property="used" />
+        <result column="event" property="event" />
+    </resultMap>
+
+</mapper>

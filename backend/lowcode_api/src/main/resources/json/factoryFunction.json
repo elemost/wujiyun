@@ -1,0 +1,443 @@
+{
+  "function": [
+    {
+      "type": "日期函数",
+      "function": "DATE",
+      "desc": "通过传入一个类型为时间戳的参数，将该时间戳转换为日期时间字符串，默认格式为：yyyy-MM-dd hh:mm:ss。",
+      "demo": "DATE(时间戳)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "将时间戳转换为日期"
+    },
+    {
+      "type": "日期函数",
+      "function": "DATEDELTA",
+      "desc": "修改日期，对日期进行加减天操作。 示例： DATEDELTA(A, -2)， 对日期 A 进行往前减2天的操作。",
+      "demo": "DATEDELTA(时间戳, 2)",
+      "returnType": "文本",
+      "fieldType": "input-date-wuji",
+      "remark": "加减日期天数"
+    },
+    {
+      "type": "日期函数",
+      "function": "DATEDIF",
+      "desc": "计算两个日期时间相差的年数、月数、天数、小时数、分钟数、秒数。\n单位可以是 \"y\" 、\"M\"、\"d\"、\"h\"、\"m\"、\"s\"",
+      "demo": "DATEDIF(开始时间, 结束时间, 'd')",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "计算两个时间差"
+    },
+    {
+      "type": "日期函数",
+      "function": "DAY",
+      "desc": "返回日期的天。",
+      "demo": "DAY(时间戳)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "当月第几天"
+    },
+    {
+      "type": "日期函数",
+      "function": "HOUR",
+      "desc": "返回日期的小时。",
+      "demo": "HOUR(时间戳)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "获取小时"
+    },
+    {
+      "type": "日期函数",
+      "function": "ISOWEEKNUM",
+      "desc": "获取年份的星期，即第几周。 示例 WEEK('2023-03-05') 得到 9。",
+      "demo": "ISOWEEKNUM(date)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "当年第几周"
+    },
+    {
+      "type": "日期函数",
+      "function": "MINUTE",
+      "desc": "返回日期的分。",
+      "demo": "MINUTE(时间戳)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "获取分钟"
+    },
+    {
+      "type": "日期函数",
+      "function": "MONTH",
+      "desc": "返回日期的月份，这里就是自然月份。",
+      "demo": "MONTH(时间戳)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "获取月份"
+    },
+    {
+      "type": "日期函数",
+      "function": "NOW",
+      "desc": "返回现在的日期",
+      "demo": "NOW()",
+      "returnType": "时间戳",
+      "fieldType": "input-date-wuji",
+      "remark": "获取当前时间"
+    },
+    {
+      "type": "日期函数",
+      "function": "SECOND",
+      "desc": "返回日期的秒。",
+      "demo": "SECOND(时间戳)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "获取秒数"
+    },
+    {
+      "type": "日期函数",
+      "function": "TIMESTAMP",
+      "desc": "返回时间的时间戳。",
+      "demo": "TIMESTAMP(日期)",
+      "returnType": "时间戳",
+      "fieldType": "input-date-wuji",
+      "remark": "日期对象转化为时间戳"
+    },
+    {
+      "type": "日期函数",
+      "function": "TODAY",
+      "desc": "返回今天的日期。",
+      "demo": "TODAY()",
+      "returnType": "时间戳",
+      "fieldType": "input-date-wuji",
+      "remark": "获取今天日期"
+    },
+    {
+      "type": "日期函数",
+      "function": "WEEKNUM",
+      "desc": "获取年份的星期，即第几周。 示例 WEEK('2023-03-05') 得到 9。",
+      "demo": "WEEKNUM(date)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "当年第几周"
+    },
+    {
+      "type": "日期函数",
+      "function": "YEAR",
+      "desc": "返回日期的年份。",
+      "demo": "YEAR(时间戳)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "返回年份"
+    },
+    {
+      "type": "逻辑函数",
+      "function": "AND",
+      "desc": "条件全部符合，返回 true，否则返回 false。 示例：AND(语文成绩>80, 数学成绩>80)， 语文成绩和数学成绩都大于 80，则返回 true，否则返回 false， 等价于直接用JS表达式如：语文成绩>80 && 数学成绩>80。",
+      "demo": "AND(expression1, expression2, ...expressionN)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "且"
+    },
+    {
+      "type": "逻辑函数",
+      "function": "IF",
+      "desc": "如果满足条件condition，则返回consequent，否则返回alternate，支持多层嵌套IF函数。 等价于直接用JS表达式如：condition ? consequent : alternate。",
+      "demo": "IF(condition, consequent, alternate)",
+      "fieldType": "input-text-wuji",
+      "remark": "条件语句"
+    },
+    {
+      "type": "逻辑函数",
+      "function": "IFS",
+      "desc": "判断函数集合，相当于多个 else if 合并成一个。 示例：IFS(语文成绩 > 80, \"优秀\", 语文成绩 > 60, \"良\", \"继续努力\")， 如果语文成绩大于 80，则返回优秀，否则判断大于 60 分，则返回良，否则返回继续努力。",
+      "demo": "IFS(condition1, result1, condition2, result2,...conditionN, resultN)",
+      "fieldType": "input-text-wuji",
+      "remark": "多条件嵌套"
+    },
+    {
+      "type": "逻辑函数",
+      "function": "OR",
+      "desc": "条件任意一个满足条件，返回 true，否则返回 false。 示例：OR(语文成绩>80, 数学成绩>80)， 语文成绩和数学成绩任意一个大于 80，则返回 true，否则返回 false， 等价于直接用JS表达式如：语文成绩>80 || 数学成绩>80。",
+      "demo": "OR(expression1, expression2, ...expressionN)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "或"
+    },
+    {
+      "type": "数学函数",
+      "function": "ABS",
+      "desc": "返回传入数字的绝对值。",
+      "demo": "ABS(num)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "获取绝对值"
+    },
+    {
+      "type": "数学函数",
+      "function": "AVERAGE",
+      "desc": "获取一组数值的算术平均值。",
+      "demo": "AVERAGE(num1,num2,....)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "计算平均值"
+    },
+    {
+      "type": "数学函数",
+      "function": "CEILING",
+      "desc": "将数字增大到最接近原值的指定因数的倍数。",
+      "demo": "CEILING(数字, 因数)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "增大到指定因数倍数"
+    },
+    {
+      "type": "数学函数",
+      "function": "FIXED",
+      "desc": "将数字舍入到指定的小数位数并输出为文本。",
+      "demo": "FIXED(数字,小数位数)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "转化为文本"
+    },
+    {
+      "type": "数学函数",
+      "function": "FLOOR",
+      "desc": "将数字减小到最接近原值的指定因数的倍数。",
+      "demo": "FLOOR(数字,因数)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "减少到指定因数倍数"
+    },
+    {
+      "type": "数学函数",
+      "function": "INT",
+      "desc": "获取一个数的整数部分。",
+      "demo": "INT(数字)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "获取整数"
+    },
+    {
+      "type": "数学函数",
+      "function": "LOG",
+      "desc": "根据指定底数返回数字的对数。",
+      "demo": "LOG(数字,底数)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "计算对数"
+    },
+    {
+      "type": "数学函数",
+      "function": "MAX",
+      "desc": "获取一组数值的最大值。",
+      "demo": "MAX(数字1,数字2,...)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "获取最大值"
+    },
+    {
+      "type": "数学函数",
+      "function": "MIN",
+      "desc": "获取一组数值的最小值。",
+      "demo": "MIN(数字1,数字2,...)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "获取最小值"
+    },
+    {
+      "type": "数学函数",
+      "function": "MOD",
+      "desc": "获取两数相除的余数。",
+      "demo": "MOD(被除数,除数)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "计算余数"
+    },
+    {
+      "type": "数学函数",
+      "function": "POWER",
+      "desc": "获取数字乘幂的结果。",
+      "demo": "POWER(数字,指数)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "计算乘幂结果"
+    },
+    {
+      "type": "数学函数",
+      "function": "RAND",
+      "desc": "返回大于等于0且小于1的均匀分布随机实数。",
+      "demo": "RAND()",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "获取随机数"
+    },
+    {
+      "type": "数学函数",
+      "function": "ROUND",
+      "desc": "将数字四舍五入到指定的位数。",
+      "demo": "ROUND(数字,数字位数)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "四舍五入"
+    },
+    {
+      "type": "数学函数",
+      "function": "SQRT",
+      "desc": "获取一个数字的正平方根。",
+      "demo": "SQRT(数字)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "计算正平方根"
+    },
+    {
+      "type": "数学函数",
+      "function": "SUM",
+      "desc": "获取一组数值的总和。",
+      "demo": "SUM(数字1,数字2,...)。",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "求和"
+    },
+    {
+      "type": "文本函数",
+      "function": "CONCATENATE",
+      "desc": "将多个文本合并成一个文本。",
+      "demo": "CONCATENATE(文本1,文本2,...)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "合并多个文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "LEFT",
+      "desc": "返回传入文本左侧的指定长度字符串。",
+      "demo": "LEFT(text, len)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "从左返回指定个字符"
+    },
+    {
+      "type": "文本函数",
+      "function": "RIGHT",
+      "desc": "返回传入文本右侧的指定长度字符串。",
+      "demo": "RIGHT(text, len)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "从右返回指定个字符"
+    },
+    {
+      "type": "文本函数",
+      "function": "LEN",
+      "desc": "计算文本的长度。",
+      "demo": "LEN(text)",
+      "returnType": "数字",
+      "fieldType": "input-number-wuji",
+      "remark": "计算字符个数"
+    },
+    {
+      "type": "文本函数",
+      "function": "ISEMPTY",
+      "desc": "判断文本是否为空。",
+      "demo": "ISEMPTY(text)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "判断是否为空"
+    },
+    {
+      "type": "文本函数",
+      "function": "CHAR",
+      "desc": "返回计算机字符集的数字代码所对应的字符。 示例：`CHAR(97)` 等价于 \"a\"。",
+      "demo": "CHAR(code)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "转换计算机字符码"
+    },
+    {
+      "type": "文本函数",
+      "function": "LOWER",
+      "desc": "将传入文本转成小写。",
+      "demo": "LOWER(text)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "大写转小写"
+    },
+    {
+      "type": "文本函数",
+      "function": "UPPER",
+      "desc": "将传入文本转成大写。",
+      "demo": "UPPER(text)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "小写转大写"
+    },
+    {
+      "type": "文本函数",
+      "function": "REPLACE",
+      "desc": "对文本进行全量替换。",
+      "demo": "REPLACE(text, search, replace)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "替换部分文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "SEARCH",
+      "desc": "对文本进行搜索，返回命中的位置。",
+      "demo": "SEARCH(text, search)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "获取文本出现位置"
+    },
+    {
+      "type": "文本函数",
+      "function": "MID",
+      "desc": "返回文本字符串中从指定位置开始的特定数目的字符。",
+      "demo": "MID(text, from, len)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "从指定位置返回字符"
+    },
+    {
+      "type": "文本函数",
+      "function": "TEXT",
+      "desc": "将数字转化成文本。",
+      "demo": "TEXT(数字)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "数字转文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "VALUE",
+      "desc": "将文本转化为数字。",
+      "demo": "VALUE(文本)",
+      "returnType": "文本",
+      "fieldType": "input-number-wuji",
+      "remark": "文本转数字"
+    },
+    {
+      "type": "文本函数",
+      "function": "TRIM",
+      "desc": "删除文本首尾的空格。",
+      "demo": "TRIM(文本)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "删除首尾空格"
+    },
+    {
+      "type": "文本函数",
+      "function": "REPT",
+      "desc": "将文本重复一定次数。",
+      "demo": "REPT(文本,重复次数)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "重复文本"
+    },
+    {
+      "type": "文本函数",
+      "function": "EXACT",
+      "desc": "比较两个文本是否完全相同，完全相同则返回true，否则返回false。",
+      "demo": "EXACT(文本,文本1)",
+      "returnType": "文本",
+      "fieldType": "input-text-wuji",
+      "remark": "比较文本一致性"
+    }
+  ]
+}
