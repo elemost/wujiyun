@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwuji_cloud=self.webpackChunkwuji_cloud||[]).push([[87274],{87274:function(s){s.exports="/static/images/app.6a9e2000.svg"}}]);

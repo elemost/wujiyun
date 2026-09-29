@@ -1,0 +1,39 @@
+{
+  "function": [
+    {
+      "type": "数学函数",
+      "function": "MAX",
+      "desc": "获取一组数值的最大值。",
+      "demo": "MAX(数字)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "MIN",
+      "desc": "获取一组数值的最小值。",
+      "demo": "MIN(数字)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "SUM",
+      "desc": "求和，如果只有一个参数且是数组，则计算这个数组内的值。",
+      "demo": "SUM(数字)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "COUNT",
+      "desc": "获取参数的数量。",
+      "demo": "COUNT(单行文本框)",
+      "returnType": "数字"
+    },
+    {
+      "type": "数学函数",
+      "function": "AVERAGE",
+      "desc": "获取一组数值的算术平均值。",
+      "demo": "AVERAGE(数字)",
+      "returnType": "数字"
+    }
+  ]
+}

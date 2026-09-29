@@ -1,0 +1,1 @@
+.nodeLabel{display:flex;width:100%;align-items:center}.nodeLabel span:first-child{font-size:14px;margin-right:6px}.nodeLabel span:last-child{width:calc(100% - 65px);overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:inline-block}

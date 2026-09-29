@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuji.service.mapper.FormQuoteMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wuji.service.model.entity.FormQuoteEntity">
+        <result column="id" property="id" />
+        <result column="create_time" property="createTime" />
+        <result column="modify_time" property="modifyTime" />
+        <result column="form_id" property="formId" />
+        <result column="business_type" property="businessType" />
+        <result column="business_id" property="businessId" />
+        <result column="quote_form_id" property="quoteFormId" />
+        <result column="quote_field" property="quoteField" />
+        <result column="creator_name" property="creatorName" />
+        <result column="modifier_name" property="modifierName" />
+    </resultMap>
+
+</mapper>

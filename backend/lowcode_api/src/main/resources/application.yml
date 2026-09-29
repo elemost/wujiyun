@@ -1,0 +1,141 @@
+server:
+  port: 9007
+  servlet:
+    context-path: /lowcode/api/v1
+    encoding:
+      charset: utf-8
+      enabled: true
+      force: true
+
+spring:
+  application:
+    name: 公共模块
+  jackson:
+    time-zone: Asia/Shanghai
+  profiles:
+    active: dev
+  datasource:
+    dynamic:
+      primary: master
+      datasource:
+        master:
+          url: jdbc:mysql://${mysql.host}:${mysql.port}/${mysql.db}?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=${mysql.timezone}&zeroDateTimeBehavior=convertToNull&failOverReadOnly=false&allowMultiQueries=true&allowPublicKeyRetrieval=true&tcpKeepAlive=true
+          username: ${mysql.user}
+          password: ${mysql.pass}
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          druid:
+            initial-size: 5
+            # 最小连接池数量
+            min-idle: 2
+            # 最大连接池数量
+            max-active: 20
+            # 配置获取连接等待超时的时间
+            max-wait: 60000
+            # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+            time-between-eviction-runs-millis: 5000
+            # 配置一个连接在池中最小生存的时间，单位是毫秒
+            min-evictable-idle-time-millis: 120000
+            # 配置一个连接在池中最大生存的时间，单位是毫秒
+            max-evictable-idle-time-millis: 180000
+            # 配置检测连接是否有效
+            validation-query: SELECT 1 FROM DUAL
+            test-while-idle: true
+            test-on-borrow: true
+            test-on-return: false
+            remove-abandoned: true
+            remove-abandoned-timeout-millis: 180000
+        slave:
+          url: jdbc:mysql://${mysql1.host}:${mysql1.port}/${mysql1.db}?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=${mysql.timezone}&zeroDateTimeBehavior=convertToNull&failOverReadOnly=false&allowMultiQueries=true&allowPublicKeyRetrieval=true&tcpKeepAlive=true
+          username: ${mysql1.user}
+          password: ${mysql1.pass}
+          driver-class-name: com.mysql.cj.jdbc.Driver
+          druid:
+            initial-size: 4
+            # 最小连接池数量
+            min-idle: 2
+            # 最大连接池数量
+            max-active: 20
+            # 配置获取连接等待超时的时间
+            max-wait: 60000
+            # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位是毫秒
+            time-between-eviction-runs-millis: 5000
+            # 配置一个连接在池中最小生存的时间，单位是毫秒
+            min-evictable-idle-time-millis: 120000
+            # 配置一个连接在池中最大生存的时间，单位是毫秒
+            max-evictable-idle-time-millis: 180000
+            # 配置检测连接是否有效
+            validation-query: SELECT 1 FROM DUAL
+            test-while-idle: true
+            test-on-borrow: true
+            test-on-return: false
+            remove-abandoned: true
+            remove-abandoned-timeout-millis: 180000
+    druid:
+      statViewServlet:
+        enabled: true
+        allow:
+        # 控制台管理用户名和密码
+        login-username: admin
+        login-password: admin
+      #url监控
+      web-stat-filter:
+        enabled: true
+        #session监控
+        session-stat-enable: true
+      filter:
+        stat:
+          enabled: true
+          # 慢SQL记录
+          log-slow-sql: true
+          slow-sql-millis: 1000
+          merge-sql: true
+        wall:
+          config:
+            multi-statement-allow: true
+
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+
+#    out-of-order: true
+
+
+
+mybatis-plus:
+  mapper-locations: classpath:mapper/*Mapper.xml
+
+fegin:
+  okhttp:
+    enabled: true
+  client:
+    config:
+      default:
+        readTimeout: 600000
+        connectTimeout: 600000
+
+logging:
+  pattern:
+    console: '%clr(%d{yyyy-MM-dd HH:mm:ss:SSS}){faint} %clr(${LOG_LEVEL_PATTERN:%5p}) %clr(${PID:- }){magenta} --- [%t] [traceId:%X{traceId}] [user:%X{User}] %c{3}:%L : %m %throwable{separator( --> )}%n'
+
+# token配置
+token:
+  # 令牌自定义标识
+  header: Authorization
+  # 令牌密钥
+  secret: abcdefghijklmnopqrstuvwxyz
+  # 令牌有效期（默认30分钟）
+  expireTime: 540
+
+# 暴露端点
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health  # 只开放健康检查端点，多个用逗号分隔 info,health
+  endpoint:
+    health:
+      show-details: always # 展示详细健康信息（可选：never|when-authorized|always）

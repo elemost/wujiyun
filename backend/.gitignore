@@ -1,0 +1,12 @@
+/.idea/
+*.iml
+/lowcode_api/target/
+/lowcode_common/target/
+/lowcode_framework/target/
+/lowcode_service/target/
+/lowcode_system/target/
+/lowcode_workflow/target/
+/lowcode_message/target/
+/lowcode_wechat/target/
+/lowcode_open/target/
+/lowcode_quartz/target/

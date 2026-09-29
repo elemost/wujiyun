@@ -1,0 +1,118 @@
+spring:
+  flyway:
+    enabled: false
+  # redis 配置
+  redis:
+    # 地址
+    host: wujiredis
+    # 端口，默认为6379
+    port: 6379
+    # 数据库索引
+    database: 0
+    # 密码
+    password: Admin@123
+    # 连接超时时间
+    timeout: 10s
+    lettuce:
+      pool:
+        # 连接池中的最小空闲连接
+        min-idle: 2
+        # 连接池中的最大空闲连接
+        max-idle: 8
+        # 连接池的最大数据库连接数
+        max-active: 8
+        # #连接池最大阻塞等待时间（使用负值表示没有限制）
+        max-wait: -1ms
+  data:
+    mongodb:
+      uri: mongodb://wuji_cloud:HZwuji123@wujimongo-master:27017,wujimongo-repl1:27017,wujimongo-repl2:27017/wuji_cloud?replicaSet=cluster-replset
+
+mysql:
+  host: wujidb
+  port: 3306
+  db: wuji_cloud
+  user: admin
+  pass: admin@123
+  timezone: Asia/Shanghai
+
+mysql1:
+  host: wujidb
+  port: 3306
+  db: wuji_home
+  user: admin
+  pass: admin@123
+  timezone: Asia/Shanghai
+
+swagger:
+  enable: false
+  apiBasePackage: com.wuji.console.controller
+  enableSecurity: true
+  title: ${spring.application.name}
+  version: 1.0
+  description: ${spring.application.name}
+  tryHost: http://localhost:${server.port}
+  contactName: elemost.com
+
+logging:
+  level:
+    root: info
+
+sso:
+  oauth:
+    authorizeUrl: https://www.elemost.com/manager-api/sso/oauth/authorize
+    backUrl: https://cloud.elemost.com
+
+
+image:
+  upload:
+    path: /data/lowcode/
+
+wechat:
+  mp:
+    appid: abc
+    signature: abc
+    configs:
+      - appid: abc
+        secret: abc
+        token:
+  miniapp:
+    configs:
+      - appid: abc
+        secret: abc
+        token:
+
+wecom:
+  token: abc
+  aseKey: abc
+  corpId: abc
+  suiteId: abc
+  suiteSecret: abc-abc
+
+qcc:
+  key: abc
+  secret: abc
+  code: abc
+
+
+
+lowcode:
+  limitCount: hfs0fJ2gJyZsU/mpwdYeyg==
+#   MINIO TENCENT_OSS
+  uploadType: MINIO
+  env: localhost
+  system: https://cloud.elemost.com/user-api/open/api
+
+minio:
+  accessKey: admin
+  secretKey: Minio@2026!
+  bucketName: upload
+
+cos:
+  accessKeyId: abc
+  accessKeySecret: abc
+  bucketName: test
+  endPoint: https://abc.com
+  region: ap-shanghai
+
+plugin:
+  server: http://localhost:9010/plugin/api/v1/open/api

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwuji_cloud=self.webpackChunkwuji_cloud||[]).push([[18245],{18245:function(s){s.exports="/static/images/hire.5d291bbc.svg"}}]);
