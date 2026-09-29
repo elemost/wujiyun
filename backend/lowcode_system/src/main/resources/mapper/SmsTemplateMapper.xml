@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuji.admin.mapper.SmsTemplateMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wuji.admin.model.entity.SmsTemplateEntity">
+        <id column="id" property="id" />
+        <result column="provider" property="provider" />
+        <result column="sms_scene" property="smsScene" />
+        <result column="template_id" property="templateId" />
+        <result column="sign_name" property="signName" />
+        <result column="param_name" property="paramName" />
+        <result column="app_id" property="appId" />
+    </resultMap>
+
+</mapper>

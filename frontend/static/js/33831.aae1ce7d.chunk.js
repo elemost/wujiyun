@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwuji_cloud=self.webpackChunkwuji_cloud||[]).push([[33831],{33831:function(s){s.exports="/static/images/watting.21d84c5a.svg"}}]);

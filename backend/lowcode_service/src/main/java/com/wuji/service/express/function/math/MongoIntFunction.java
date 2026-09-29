@@ -1,0 +1,22 @@
+package com.wuji.service.express.function.math;
+
+import com.wuji.common.exception.BizException;
+import com.wuji.service.express.function.BaseMongoFunction;
+import com.wuji.service.utils.MongoSearchUtils;
+import org.bson.Document;
+
+public class MongoIntFunction extends BaseMongoFunction {
+
+    public MongoIntFunction(String name) {
+        super(name);
+        this.name = name;
+    }
+
+    @Override
+    public Object executeInner(Object[] list) {
+        if (list.length != 1) {
+            throw new BizException(name + "公式错误");
+        }
+        return new Document("$trunc", MongoSearchUtils.qlExpressValue(list[0]));
+    }
+}
