@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwuji_cloud=self.webpackChunkwuji_cloud||[]).push([[32520],{32520:function(e){e.exports="/static/images/circle.1de927e7.svg"}}]);

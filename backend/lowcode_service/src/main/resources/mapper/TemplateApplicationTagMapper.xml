@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuji.service.mapper.TemplateApplicationTagMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wuji.service.model.entity.TemplateApplicationTagEntity">
+        <result column="id" property="id" />
+        <result column="application_id" property="applicationId" />
+        <result column="tag_type" property="tagType" />
+        <result column="tag_value" property="tagValue" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,1 @@
+.header{height:50px;width:100%;display:flex;align-items:flex-end;justify-content:space-between;padding:0 15px 5px;box-sizing:border-box;background-color:#fff}.header .title{max-width:20vw;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-weight:500;font-size:16px}.header .btns{display:flex;align-items:center;gap:10px}.content{height:calc(100% - 50px)}

@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwuji_cloud=self.webpackChunkwuji_cloud||[]).push([[96390],{96390:function(u,t,e){e.r(t),e.d(t,{default:function(){return r}});e(67294);var n=e(10575),c=e(85893);function r(){var u=(0,n.useOutletContext)();return(0,c.jsx)(n.Outlet,{context:u})}}}]);

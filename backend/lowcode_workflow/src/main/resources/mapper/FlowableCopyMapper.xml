@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.wuji.workflow.mapper.FlowableCopyMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.wuji.workflow.model.entity.FlowableCopyEntity">
+        <result column="id" property="id" />
+        <result column="create_time" property="createTime" />
+        <result column="process_instance_id" property="processInstanceId" />
+        <result column="task_id" property="taskId" />
+        <result column="task_name" property="taskName" />
+        <result column="initiator" property="initiator" />
+        <result column="form_id" property="formId" />
+        <result column="business_type" property="businessType" />
+        <result column="model_id" property="modelId" />
+    </resultMap>
+
+</mapper>
